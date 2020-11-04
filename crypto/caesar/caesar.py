@@ -12,7 +12,7 @@ class Caesar(Crypto):
         return ''.join([chr(ord(symbol) - self.offset) for symbol in data])
 
 
-if __name__ == '__main__':
+def start():
     c = Caesar(offset=-2)
     text = 'my secret text'
     encrypted = c.encrypt(text)
@@ -20,3 +20,7 @@ if __name__ == '__main__':
     print(text)
     print(encrypted)
     print(decrypted)
+
+
+if __name__ == '__main__':
+    start()
