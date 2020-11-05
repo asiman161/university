@@ -5,7 +5,7 @@ class Vigenere(Crypto):
     def __init__(self, key: str = ""):
         super().__init__(key=key)
 
-    def encrypt(self, text: str):
+    def encrypt(self, text: str) -> str:
         key = self.key * (len(text) // len(self.key) + 1)
         encrypted = ""
         for i, v in enumerate(text):
@@ -13,7 +13,7 @@ class Vigenere(Crypto):
             encrypted += chr(code % 26 + ord('a'))
         return encrypted
 
-    def decrypt(self, text):
+    def decrypt(self, text) -> str:
         key = self.key * (len(text) // len(self.key) + 1)
         decrypted = ''
         for i, j in enumerate(text):
