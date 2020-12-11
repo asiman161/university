@@ -9,6 +9,9 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(False, prime.is_prime(10))
         self.assertEqual(True, prime.is_prime(3))
         self.assertEqual(True, prime.is_prime(97))
+        self.assertEqual(True, prime.is_prime(5))
+        self.assertEqual(True, prime.is_prime(7))
+        self.assertEqual(False, prime.is_prime(8))
 
 
 if __name__ == '__main__':

@@ -2,13 +2,13 @@ from crypto.crypto import Crypto
 
 
 class SimpleReplace(Crypto):
-    alphabet = list('abcdefghijklmnopqrstuvwxyz')
+    alphabet = list('abcdefghijklmnopqrstuvwxyz ')
     encrypt_map = dict()
     decrypt_map = dict()
 
     def __init__(self, key: str):
-        if len(key) != 26:
-            raise ValueError(f"the len of key must be 26. provided key len is {len(key)}")
+        if len(key) != len(self.alphabet):
+            raise ValueError(f"the len of key must be {len(self.alphabet)}. provided key len is {len(key)}")
         super().__init__(key=key)
         zipped = zip(self.alphabet, self.key)
         for v in zipped:
@@ -23,8 +23,8 @@ class SimpleReplace(Crypto):
 
 
 if __name__ == '__main__':
-    sr = SimpleReplace('qwertyuiopasdfghjklzxcvbnm')
-    text = 'secret'
+    sr = SimpleReplace(' qwertyuiopasdfghjklzxcvbnm')
+    text = 'secret long message'
     encrypted = sr.encrypt(text)
     decrypted = sr.decrypt(encrypted)
     print(text)
