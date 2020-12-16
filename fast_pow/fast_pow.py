@@ -11,4 +11,4 @@ def fast_pow(x, y):
 
 
 if __name__ == '__main__':
-    print(fast_pow(21, 15))
+    print(fast_pow(5, 15))

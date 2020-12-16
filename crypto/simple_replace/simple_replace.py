@@ -2,7 +2,7 @@ from crypto.crypto import Crypto
 
 
 class SimpleReplace(Crypto):
-    alphabet = list('abcdefghijklmnopqrstuvwxyz ')
+    alphabet = list('йцукенгшщзхъфывапролджэячсмитьбю/ ')
     encrypt_map = dict()
     decrypt_map = dict()
 
@@ -23,8 +23,8 @@ class SimpleReplace(Crypto):
 
 
 if __name__ == '__main__':
-    sr = SimpleReplace(' qwertyuiopasdfghjklzxcvbnm')
-    text = 'secret long message'
+    sr = SimpleReplace(' /юбьтимсчяэждлорпавыфъхзщшгнекуцй')
+    text = input("введите текст: ")
     encrypted = sr.encrypt(text)
     decrypted = sr.decrypt(encrypted)
     print(text)

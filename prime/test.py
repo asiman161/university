@@ -11,6 +11,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(True, prime.is_prime(97))
         self.assertEqual(True, prime.is_prime(5))
         self.assertEqual(True, prime.is_prime(7))
+        self.assertEqual(True, prime.is_prime(173099))
         self.assertEqual(False, prime.is_prime(8))
 
 
